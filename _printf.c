@@ -16,7 +16,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int j;
+	unsigned int j;
 	int i = 0;
 	int count = 0;
 
