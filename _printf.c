@@ -16,42 +16,20 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	unsigned int j;
-	int i = 0;
 	int count = 0;
 
 	format_map_t format_maps[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{NULL, NULL}
 	};
+
+	if (format == NULL)
+		return (-1);
 
 	va_start(args, format);
 
-	while (format[i] != '\0')
-	{
-		if (format[i] != '%')
-		{
-			write(1, &format[i], 1);
-			count++;
-		}
-		else
-		{
-			i++;
-			j = 0;
-			while (j < sizeof(format_maps) / sizeof(format_maps[0]))
-			{
-				if (format[i] == *format_maps[j].specifier)
-				{
-					format_maps[j].print_func(args, &count);
-					break;
-				}
-				else if (format[i] == '%')
-					_putchar('%');
-				j++;
-			}
-		}
-		i++;
-	}
+	parse(format, format_maps, args, &count);
 
 	va_end(args);
 
