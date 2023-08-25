@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * parser - processes the format string and prints the character or
+ * parse - processes the format string and prints the character or
  * invokes the appropriate function
  *
  * @format: the format string to process
- * @format_maps: the map of a specifier character to the approproate function
+ * @maps: the map of a specifier character to the approproate function
  * @args: the va_list containing the variable arguments
  * @count: a pointer to the count of characters printed
  */

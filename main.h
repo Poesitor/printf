@@ -3,6 +3,13 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
+
+/**
+ * struct format_map_t - Mapping of format specifiers to print functions
+ *
+ * @specifiers: The format specifier character
+ * @print_func: Pointer to the corresponding print function
+ */
 typedef struct
 {
 	char *specifier;
