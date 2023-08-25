@@ -45,6 +45,8 @@ int _printf(const char *format, ...)
 					format_maps[j].print_func(args, &count);
 					break;
 				}
+				else if (format[i] == '%')
+					_putchar('%');
 				j++;
 			}
 		}
