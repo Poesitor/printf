@@ -20,6 +20,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 void print_char(va_list args, int *count);
 void print_string(va_list args, int *count);
+void print_percent(va_list args, int *count);
 void parse(const char *, format_map_t maps[], va_list, int *);
 
 #endif /* MAIN_H */

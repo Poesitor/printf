@@ -32,8 +32,6 @@ void parse(const char *format, format_map_t maps[], va_list args, int *count)
 					maps[j].print_func(args, count);
 					break;
 				}
-				else if (format[i] == '%')
-					_putchar('%');
 				j++;
 			}
 		}

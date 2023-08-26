@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 	format_map_t format_maps[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"%", print_percent},
 		{NULL, NULL}
 	};
 

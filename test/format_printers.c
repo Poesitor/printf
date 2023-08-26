@@ -5,6 +5,20 @@
 #include <stdio.h>
 
 /**
+ * print_percent - prints the percent symbol
+ *
+ * @args: the list of arguments passed to _printf
+ * @count: char count
+ *
+ * Return: void
+ */
+void print_percent(__attribute__((unused)) va_list args, int *count)
+{
+	_putchar('%');
+	(*count)++;
+}
+
+/**
  * print_char - prints the char argument at the specified position
  *
  * @args: the list of arguments passed to _printf

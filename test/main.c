@@ -1,5 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
+
 #include "main.h"
 
 /**
@@ -9,16 +10,29 @@
  */
 int main(void)
 {
-	int len;
-	int len2;
-
-	len = _printf("let's try to printf a simple sentence.\n");
-	len2 = printf("let's try to printf a simple sentence.\n");
-	printf("Length: [%d, %i]\n", len, len2);
+	char ch = 'A';
+	char *str = "Hello, World!";
+	char *null_str = NULL;
+	char special_ch = '\t';
+	char newline_ch = '\n';
 
 	/* Test for %c and %s format specifier */
-	_printf("Character:[%c]\n", 'H');
-	printf("Character:[%c]\n", 'H');
+	_printf("Character:[%c]\n", ch);
+	printf("Character:[%c]\n", ch);
+
+	_printf("String:[%s]\n", str);
+	printf("String:[%s]\n", str);
+
+	_printf("Percent sign: [%%]\n");
+	printf("Percent sign: [%%]\n");
+
+	printf("Null String: [%s]\n", null_str);
+
+	_printf("Special Character: [%c]\n", special_ch);
+	printf("Special Character: [%c]\n", special_ch);
+
+	_printf("Newline Character: [%c]\n", newline_ch);
+	printf("Newline Character: [%c]\n", newline_ch);
 
 	return (0);
 }
